@@ -8,7 +8,7 @@ from src.utils.responses.responses import messageResponse, loginResponse
 from datetime import datetime, timedelta
 
 # Define the router for user-related endpoints
-user_router = router
+user_router = router(tag="User")
 
 
 @user_router.get("/users")

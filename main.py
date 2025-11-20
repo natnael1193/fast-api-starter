@@ -8,6 +8,8 @@ from src.utils.security import authenticate_user, create_access_token, get_curre
 from datetime import timedelta
 from fastapi.security import OAuth2PasswordRequestForm
 
+from src.modules.videos.router import video_router
+
 app = FastAPI()
 
 
@@ -24,3 +26,4 @@ def read_root():
 
 # Register the routers
 app.include_router(user_router, prefix="/api/v1/user", tags=["User"])
+app.include_router(video_router, prefix="/api/v1", tags=["Videos"])

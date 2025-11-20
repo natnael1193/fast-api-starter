@@ -1,3 +1,5 @@
 from fastapi import APIRouter, UploadFile
 
-router = APIRouter()
+def router(tag = "Default"):
+    routers = APIRouter(tags=[tag])
+    return routers
